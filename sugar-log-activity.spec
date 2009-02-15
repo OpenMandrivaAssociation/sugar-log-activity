@@ -10,10 +10,11 @@ Url: http://sugarlabs.org/
 
 Source: http://dev.laptop.org/pub/sugar/sources/Log/Log-16.tar.bz2
 
-Requires: sugar-toolkit >= 0.83.4
+Requires: sugar-toolkit >= 0.83.6
+Requires: gnome-vfs  
 Requires: gnome-python-gnomevfs  
 
-BuildRequires: sugar-toolkit >= 0.83.4
+BuildRequires: sugar-toolkit >= 0.83.6
 BuildRequires: gettext  
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
