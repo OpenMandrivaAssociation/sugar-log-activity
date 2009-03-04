@@ -10,12 +10,12 @@ Url: http://sugarlabs.org/
 
 Source: http://download.sugarlabs.org/sources/sucrose/fructose/Log/Log-17.tar.bz2
 
-Requires: sugar-toolkit >= 0.83.7
 Requires: gnome-vfs2  
 Requires: gnome-python-gnomevfs  
+Requires: sugar-toolkit >= 0.84.0
 
-BuildRequires: sugar-toolkit >= 0.83.7
 BuildRequires: gettext  
+BuildRequires: sugar-toolkit >= 0.84.0
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
