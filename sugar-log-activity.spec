@@ -13,10 +13,10 @@ Source: http://download.sugarlabs.org/sources/sucrose/fructose/Log/Log-23.tar.bz
 
 Requires: gnome-vfs2  
 Requires: gnome-python-gnomevfs  
-Requires: sugar-toolkit >= 0.86.0
+Requires: sugar-toolkit >= 0.86.1
 
 BuildRequires: gettext  
-BuildRequires: sugar-toolkit >= 0.86.0
+BuildRequires: sugar-toolkit >= 0.86.1
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
