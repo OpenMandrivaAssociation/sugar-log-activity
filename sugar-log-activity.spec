@@ -13,10 +13,10 @@ Source: http://download.sugarlabs.org/sources/sucrose/fructose/Log/Log-23.tar.bz
 
 Requires: gnome-vfs2  
 Requires: gnome-python-gnomevfs  
-Requires: sugar-toolkit >= 0.88.0
+Requires: sugar-toolkit >= 0.85.8
 
 BuildRequires: gettext  
-BuildRequires: sugar-toolkit >= 0.88.0
+BuildRequires: sugar-toolkit >= 0.85.8
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
@@ -48,4 +48,27 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %{_datadir}/sugar/activities/*
 %doc COPYING NEWS
+
+
+
+%changelog
+* Sat Sep 19 2009 Aleksey Lim <alsroot@mandriva.org> 23-1mdv2010.0
++ Revision: 444546
+- Update to 23
+
+* Tue Aug 11 2009 Aleksey Lim <alsroot@mandriva.org> 19-1mdv2010.0
++ Revision: 414903
+- Sucrose 0.85.2
+
+* Mon Apr 06 2009 Aleksey Lim <alsroot@mandriva.org> 18-1mdv2009.1
++ Revision: 364290
+- Sucrose 0.84.2 release
+
+* Mon Feb 23 2009 Aleksey Lim <alsroot@mandriva.org> 17-1mdv2009.1
++ Revision: 344229
+- Sucrose 0.83.6 release
+
+* Sun Jan 11 2009 Aleksey Lim <alsroot@mandriva.org> 16-1mdv2009.1
++ Revision: 328408
+- initial commit
 
