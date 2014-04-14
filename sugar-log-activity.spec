@@ -2,21 +2,20 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: sugar-log-activity
-Version: 23
-Release: %mkrel 1
+Version: 36
+Release: 1
 Summary: Log activity for Sugar
 License: GPL
 Group: Graphical desktop/Other
 Url: http://sugarlabs.org/
 
-Source: http://download.sugarlabs.org/sources/sucrose/fructose/Log/Log-23.tar.bz2
+Source: http://download.sugarlabs.org/sources/sucrose/fructose/Log/Log-%{version}.tar.bz2
 
-Requires: gnome-vfs2  
-Requires: gnome-python-gnomevfs  
-Requires: sugar-toolkit >= 0.85.8
+Requires: sugar-toolkit-gtk3 >= 0.85.8
+Requires: python-gi
 
 BuildRequires: gettext  
-BuildRequires: sugar-toolkit >= 0.85.8
+BuildRequires: sugar-toolkit-gtk3 >= 0.85.8
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
@@ -27,7 +26,7 @@ by system software and other activities. Logs can also be uploaded to servers
 to allow support staff to assist with troubleshooting.
 
 %prep
-%setup -q -n Log-23
+%setup -q -n Log-%{version}
 
 
 %build
