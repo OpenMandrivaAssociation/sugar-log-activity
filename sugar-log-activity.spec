@@ -3,7 +3,7 @@
 
 Name: sugar-log-activity
 Version: 36
-Release: 1
+Release: 2
 Summary: Log activity for Sugar
 License: GPL
 Group: Graphical desktop/Other
