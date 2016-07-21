@@ -2,8 +2,8 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: sugar-log-activity
-Version: 36
-Release: 2
+Version: 37
+Release: 1
 Summary: Log activity for Sugar
 License: GPL
 Group: Graphical desktop/Other
@@ -12,12 +12,11 @@ Url: http://sugarlabs.org/
 Source: http://download.sugarlabs.org/sources/sucrose/fructose/Log/Log-%{version}.tar.bz2
 
 Requires: sugar-toolkit-gtk3 >= 0.85.8
-Requires: python-gi
+Requires: python2-gi
 
 BuildRequires: gettext  
 BuildRequires: sugar-toolkit-gtk3 >= 0.85.8
 
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
 %description
@@ -32,19 +31,14 @@ to allow support staff to assist with troubleshooting.
 %build
 
 rm -f MANIFEST
-python setup.py build
+python2 setup.py build
 
 %install
-rm -rf %{buildroot}
-python setup.py install --prefix=%{buildroot}/%{_prefix}
+python2 setup.py install --prefix=%{buildroot}/%{_prefix}
 find %{buildroot} -name '*.py.orig' -print0 | xargs -0 rm -f
 %find_lang org.laptop.Log
 
-%clean
-rm -rf %{buildroot}
-
 %files -f org.laptop.Log.lang
-%defattr(-,root,root,-)
 %{_datadir}/sugar/activities/*
 %doc COPYING NEWS
 
